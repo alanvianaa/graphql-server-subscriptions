@@ -1,0 +1,21 @@
+type Book {
+    title: String
+    author: String
+}
+
+type Post {
+    author: String
+    comment: String
+}
+
+type Query {
+    books: [Book]
+}
+
+type Subscription {
+    postCreated: Post
+}
+
+type Mutation {
+    createPost(author: String, comment: String): Post
+}
